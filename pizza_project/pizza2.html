@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/pizza.css">
+    <title>Academy Pizza</title>
+  </head>
+  <body class="text-light">
+      <div class="container">
+            <h1 class="text-center head text-light border border-light" >Pizza Menu</h1>
+<!--Pizza Forms-------------------------------------------------->
+            <div class="container">
+                    <div class="row">
+                      <div class="col border border-light rounded text-light">
+                          <h5>Choose Your Size:</h5>
+                            <form action="#" method="post" id="size">
+                                    <input id="size1" type="radio" name="size" value=6>Personal</input><br>
+                                    <input id="size2" type="radio" name="size" value=10>Medium</input><br>
+                                    <input id="size3" type="radio" name="size" value=14>Large</input><br>
+                                    <input id="size4" type="radio" name="size" value=16>Extra Large</input>
+                            </form>
+                      </div>
+                      <div class="col border border-light rounded text-light">
+                          <h5>Choose Your Protein:</h5>
+                            <input id="meat1" type="checkbox" name="meat" value=1>Pepperoni</input><br>
+                            <input id="meat2" type="checkbox" name="meat" value=1>Sausage</input><br>
+                            <input id="meat3" type="checkbox" name="meat" value=1>Canadian Bacon</input><br>
+                            <input id="meat4" type="checkbox" name="meat" value=1>Ground Beef</input><br>
+                            <input id="meat5" type="checkbox" name="meat" value=1>Anchovy</input><br>
+                            <input id="meat6" type="checkbox" name="meat" value=1>Chicken</input>
+                      </div>
+                      <div class="col border border-light rounded text-light">
+                          <h5>Choose Your Cheese:</h5>
+                            <input id="cheese1" type="radio" name="cheese" value=0>Regular Cheese</input><br>
+                            <input id="cheese2" type="radio" name="cheese" value=0>No Cheese</input><br>
+                            <input id="cheese3" type="radio" name="cheese" value=3>Extra Cheese</input>
+                      </div>
+                    </div>
+                    <div class="row border border-light rounded text-light">
+                        
+                      <div class="col">
+                        <h5>Choose Your Crust:</h5>
+                            <input id="crust1" type="radio" name="crust" value=0>Plain Crust</input><br> 
+                            <input id="crust2" type="radio" name="crust" value=0>Garlic Butter Crust</input><br>     
+                            <input id="crust3" type="radio" name="crust" value=3>Cheese Stuffed Crust</input><br>
+                            <input id="crust4" type="radio" name="crust" value=0>Spicy Crust</input><br>
+                            <input id="crust5" type="radio" name="crust" value=0>House Special Crust</input> 
+                      </div>
+                      <div class="col border border-light rounded text-light">
+                        <h5>Choose Your Sauce:</h5>
+                            <input id="sauce1" type="radio" name="sauce" value=0>Marinara</input><br>
+                            <input id="sauce2" type="radio" name="sauce" value=0>White Sauce</input><br>
+                            <input id="sauce3" type="radio" name="sauce" value=0>BBQ Sauce</input><br> 
+                            <input id="sauce4" type="radio" name="sauce" value=0>No Sauce</input> 
+                      </div>
+                      <div class="col border border-light rounded">
+                          <h5>Choose Your Veggies:</h5>
+                            <input id="veg1" type="checkbox" name="veggies" value=1>Tomatoes</input><br>
+                            <input id="veg2" type="checkbox" name="veggies" value=1>Onions</input><br>
+                            <input id="veg3" type="checkbox" name="veggies" value=1>Olives</input><br>
+                            <input id="veg4" type="checkbox" name="veggies" value=1>Green Peppers</input><br>
+                            <input id="veg5" type="checkbox" name="veggies" value=1>Mushrooms</input><br>
+                            <input id="veg6" type="checkbox" name="veggies" value=1>Pineapple</input><br>
+                            <input id="veg7" type="checkbox" name="veggies" value=1>Spinach</input><br>
+                            <input id="veg8" type="checkbox" name="veggies" value=1>Jalapeno</input>  
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+    <!--End Pizza Form--------------------------------------------------------->
+
+    <button class="text center" type="button" onclick="Calc()"name="getVal">Place Order</button><br>
+
+    <!--Order Review----------------------------------------------------------->
+        
+    <div class="container">
+        <br>
+            <div class="row">
+              <div class="col-sm-8 border border-light text-light rounded">
+                  <h5>Order review</h5><br>
+                    <p id="sizeA"></p>
+                    <p id="cheeseA"></p>
+                    <p id="crustA"></p>
+                    <p id="sauceA"></p>
+                    <p id="pep1"></p>
+                    <p id="saus1"></p>
+                    <p id="can1"></p>
+                    <p id="gb1"></p>
+                    <p id="anch1"></p>
+                    <p id="chic1"></p>
+                    <p id="tom1"></p>
+                    <p id="oni1"></p>
+                    <p id="oli1"></p>
+                    <p id="gp1"></p>
+                    <p id="mush1"></p>
+                    <p id="pine1"></p>
+                    <p id="spin1"></p>
+                    <p id="jal1"></p>
+                    <p id="meat_sub"></p>
+                    <p id="veg_sub"></p>
+              </div>
+              <div class="col-sm-4 border border-light text-light rounded">
+                  <h5>Sub Total</h5><br>
+                    <p id="sizeZ"></p>
+                    <p id="cheeseZ"></p>
+                    <p id="crustZ"></p>
+                    <p id="sauceZ"></p>
+                    <p id="pep2"></p>
+                    <p id="saus2"></p>
+                    <p id="can2"></p>
+                    <p id="gb2"></p>
+                    <p id="anch2"></p>
+                    <p id="chic2"></p>
+                    <p id="tom2"></p>
+                    <p id="oni2"></p>
+                    <p id="oli2"></p>
+                    <p id="gp2"></p>
+                    <p id="mush2"></p>
+                    <p id="pine2"></p>
+                    <p id="spin2"></p>
+                    <p id="jal2"></p>
+                    <p id="meat_sub2"></p>
+                    <p id="veg_sub2"></p>
+              </div>
+            </div>
+          </div> 
+    <!--End Order Review---------------------------------------------------------------------> 
+    
+    <!--Total-------------------------------------------------------------------------------->
+    <div class="container">
+            <div class="row">
+              <div class="col-sm-8">
+                  <br><br>
+                  <h5>Total:</h5>
+              </div>
+              <div class="col-sm-4">
+                  <br><br>
+                  <h5 id="total_price"></h5>
+              </div>
+            </div>
+          </div>
+
+
+
+
+      </div>
+
+      <script>
+            function Calc() { 
+              // Size----------------------------------------------
+              if(document.getElementById("size1").checked) {
+                      var size1 = document.getElementById("size1").value;
+                      sizeA.innerHTML = "Personal Pizza";
+                      sizeZ.innerHTML = "$"+size1+".00";
+              }
+              else {var size1 = 0};
+              console.log(size1);
+      
+              if(document.getElementById("size2").checked) {
+                      var size2 = document.getElementById("size2").value;
+                      sizeA.innerHTML = "Medium Pizza";
+                      sizeZ.innerHTML = "$"+size2+".00";
+              }
+              else {var size2 = 0};
+              console.log(size2);
+      
+              if(document.getElementById("size3").checked) {
+                      var size3 = document.getElementById("size3").value;
+                      sizeA.innerHTML = "Large Pizza";
+                      sizeZ.innerHTML = "$"+size3+".00";
+              }
+              else {var size3 = 0};
+              console.log(size3);
+      
+              if(document.getElementById("size4").checked) {
+                      var size4 = document.getElementById("size4").value;
+                      sizeA.innerHTML = "Extra Large Pizza";
+                      sizeZ.innerHTML = "$"+size4+".00";
+              }
+              else {var size4 = 0};
+              console.log(size4);
+      
+              //Cheese------------------------------------------------
+      
+              if(document.getElementById("cheese1").checked) {
+                      var cheese1 = document.getElementById("cheese1").value;
+                      cheeseA.innerHTML = "Regular Cheese";
+                      cheeseZ.innerHTML = "$"+cheese1+".00"
+              }
+              else {var cheese1 = 0};
+              console.log(cheese1);
+              
+              if(document.getElementById("cheese2").checked) {
+                      var cheese2 = document.getElementById("cheese2").value;
+                      cheeseA.innerHTML = "No Cheese";
+                      cheeseZ.innerHTML = "$"+cheese2+".00"
+              }
+              else {var cheese2 = 0};
+              console.log(cheese2);
+      
+              if(document.getElementById("cheese3").checked) {
+                      var cheese3 = document.getElementById("cheese3").value;
+                      cheeseA.innerHTML = "Extra Cheese";
+                      cheeseZ.innerHTML = "$"+cheese3+".00"
+              }
+              else {var cheese3 = 0};
+              console.log(cheese3);
+      
+              //Crust--------------------------------------------------------
+      
+              if(document.getElementById("crust1").checked) {
+                      var crust1 = document.getElementById("crust1").value;
+                      crustA.innerHTML = "Plain Crust";
+                      crustZ.innerHTML = "$"+crust1+".00"
+              }
+              else {var crust1 = 0};
+              console.log(crust1);
+      
+              if(document.getElementById("crust2").checked) {
+                      var crust2 = document.getElementById("crust2").value;
+                      crustA.innerHTML = "Garlic Butter Crust";
+                      crustZ.innerHTML = "$"+crust2+".00"
+              }
+              else {var crust2 = 0};
+              console.log(crust2);
+      
+              if(document.getElementById("crust3").checked) {
+                      var crust3 = document.getElementById("crust3").value;
+                      crustA.innerHTML = "Cheese Stuffed Crust";
+                      crustZ.innerHTML = "$"+crust3+".00"
+              }
+              else {var crust3 = 0};
+              console.log(crust3);
+      
+              if(document.getElementById("crust4").checked) {
+                      var crust4 = document.getElementById("crust4").value;
+                      crustA.innerHTML = "Spicy Crust";
+                      crustZ.innerHTML = "$"+crust4+".00"
+              }
+              else {var crust4 = 0};
+              console.log(crust4);
+      
+              if(document.getElementById("crust5").checked) {
+                      var crust5 = document.getElementById("crust5").value;
+                      crustA.innerHTML = "House Special Crust";
+                      crustZ.innerHTML = "$"+crust5+".00"
+              }
+              else {var crust5 = 0};
+              console.log(crust5);
+      
+              
+              
+              //Sauce------------------------------------------------------------------
+      
+              if(document.getElementById("sauce1").checked) {
+                      var sauce1 = document.getElementById("sauce1").value;
+                      sauceA.innerHTML = "Marinara";
+                      sauceZ.innerHTML = "$"+sauce1+".00";
+              }
+              else {var sauce1 = 0};
+              console.log(sauce1);
+      
+              if(document.getElementById("sauce2").checked) {
+                      var sauce2 = document.getElementById("sauce2").value;
+                      sauceA.innerHTML = "White Sauce";
+                      sauceZ.innerHTML = "$"+sauce2+".00";
+              }
+              else {var sauce2 = 0};
+              console.log(sauce2);
+      
+              if(document.getElementById("sauce3").checked) {
+                      var sauce3 = document.getElementById("sauce3").value;
+                      sauceA.innerHTML = "BBQ Sauce";
+                      sauceZ.innerHTML = "$"+sauce3+".00";
+                      
+              }
+              else {var sauce3 = 0};
+              console.log(sauce3);
+      
+              if(document.getElementById("sauce4").checked) {
+                      var sauce4 = document.getElementById("sauce4").value;
+                      sauceA.innerHTML = "No Sauce";
+                      sauceZ.innerHTML = "$"+sauce4+".00";
+              }
+              else {var sauce4 = 0};
+              console.log(sauce4);
+      
+              //Meat-------------------------------------------------------------
+      
+              if(document.getElementById("meat1").checked) {
+                      var meat1 = document.getElementById("meat1").value;
+                      pep1.innerHTML = "Pepperoni";
+                      pep2.innerHTML = "$1.00";
+              }
+              else {var meat1 = 0};
+              console.log(meat1);
+      
+              if(document.getElementById("meat2").checked) {
+                      var meat2 = document.getElementById("meat2").value;
+                      saus1.innerHTML = "Sausage";
+                      saus2.innerHTML = "$1.00";
+              }
+              else {var meat2 = 0};
+              console.log(meat2);
+      
+              if(document.getElementById("meat3").checked) {
+                      var meat3 = document.getElementById("meat3").value;
+                      can1.innerHTML = "Canadian Bacon";
+                      can2.innerHTML = "$1.00";
+              }
+              else {var meat3 = 0};
+              console.log(meat3);
+      
+              if(document.getElementById("meat4").checked) {
+                      var meat4 = document.getElementById("meat4").value;
+                      gb1.innerHTML = "Ground Beef";
+                      gb2.innerHTML = "$1.00";
+              }
+              else {var meat4 = 0};
+              console.log(meat4);
+      
+              if(document.getElementById("meat5").checked) {
+                      var meat5 = document.getElementById("meat5").value;
+                      anch1.innerHTML = "Anchovy";
+                      anch2.innerHTML = "$1.00";
+              }
+              else {var meat5 = 0};
+              console.log(meat5);
+      
+              if(document.getElementById("meat6").checked) {
+                      var meat6 = document.getElementById("meat6").value;
+                      chic1.innerHTML = "Chicken";
+                      chic2.innerHTML = "$1.00";
+              }
+              else {var meat6 = 0};
+              console.log(meat6);
+      
+              //Veggies-------------------------------------------------------------
+      
+              if(document.getElementById("veg1").checked) {
+                      var veg1 = document.getElementById("veg1").value;
+                      tom1.innerHTML = "Tomatoes";
+                      tom2.innerHTML = "$1.00";
+                      
+              }
+              else {var veg1 = 0};
+              console.log(veg1);
+      
+              if(document.getElementById("veg2").checked) {
+                      var veg2 = document.getElementById("veg2").value;
+                      oni1.innerHTML = "Onion";
+                      oni2.innerHTML = "$1.00";
+                      
+              }
+              else {var veg2 = 0};
+              console.log(veg2);
+      
+              if(document.getElementById("veg3").checked) {
+                      var veg3 = document.getElementById("veg3").value;
+                      oli1.innerHTML = "Olives";
+                      oli2.innerHTML = "$1.00";
+              }
+              else {var veg3 = 0};
+              console.log(veg3);
+      
+              if(document.getElementById("veg4").checked) {
+                      var veg4 = document.getElementById("veg4").value;
+                      gp1.innerHTML = "Green Peppers";
+                      gp2.innerHTML = "$1.00";
+              }
+              else {var veg4 = 0};
+              console.log(veg4);
+      
+              if(document.getElementById("veg5").checked) {
+                      var veg5 = document.getElementById("veg5").value;
+                      mush1.innerHTML = "Mushrooms";
+                      mush2.innerHTML = "$1.00";
+              }
+              else {var veg5 = 0};
+              console.log(veg5);
+      
+              if(document.getElementById("veg6").checked) {
+                      var veg6 = document.getElementById("veg6").value;
+                      pine1.innerHTML = "Pineapple";
+                      pine2.innerHTML = "$1.00";
+              }
+              else {var veg6 = 0};
+              console.log(veg6);
+      
+              if(document.getElementById("veg7").checked) {
+                      var veg7 = document.getElementById("veg7").value;
+                      spi1.innerHTML = "Spinach";
+                      spi2.innerHTML = "$1.00";
+              }
+              else {var veg7 = 0};
+              console.log(veg7);
+      
+              if(document.getElementById("veg8").checked) {
+                      var veg8 = document.getElementById("veg8").value;
+                      jal1.innerHTML = "Jalapeno";
+                      jal2.innerHTML = "$1.00";
+              }
+              else {var veg8 = 0};
+              console.log(veg8);
+
+//Parse Integers--------------------------------------------------------------------
+             var meat1a = parseInt(meat1);
+             var meat2a = parseInt(meat2);
+             var meat3a = parseInt(meat3);
+             var meat4a = parseInt(meat4);
+             var meat5a = parseInt(meat5);
+             var meat6a = parseInt(meat6);
+
+             var veg1a = parseInt(veg1);
+             var veg2a = parseInt(veg2);
+             var veg3a = parseInt(veg3);
+             var veg4a = parseInt(veg4);
+             var veg5a = parseInt(veg5);
+             var veg6a = parseInt(veg6);
+             var veg7a = parseInt(veg7);
+             var veg8a = parseInt(veg8);
+
+             var crust1a = parseInt(crust1);
+             var crust2a = parseInt(crust2);
+             var crust3a = parseInt(crust3);
+             var crust4a = parseInt(crust4);
+             var crust5a = parseInt(crust5);
+
+             var sauce1a = parseInt(sauce1);
+             var sauce2a = parseInt(sauce2);
+             var sauce3a = parseInt(sauce3);
+             var sauce4a = parseInt(sauce4);
+
+             var size1a = parseInt(size1);
+             var size2a = parseInt(size2);
+             var size3a = parseInt(size3);
+             var size4a = parseInt(size4);
+
+             var cheese1a = parseInt(cheese1);
+             var cheese2a = parseInt(cheese2);
+             var cheese3a = parseInt(cheese3);
+
+        // Total Cost---------------------------------------------------------------------------
+
+            var meat_subtotal = meat1a +meat2a + meat3a +meat4a + meat5a + meat6a;
+            console.log(meat_subtotal);
+             if (meat_subtotal >= 1) {
+                 var meat_total = meat_subtotal - 1;
+                 meat_sub.innerHTML = "Subtract 1 Meat Item";
+                 meat_sub2.innerHTML = "-$1.00";
+
+             }
+             else meat_total = meat_subtotal;
+             console.log(meat_total);  
+
+             var veg_subtotal = veg1a +veg2a + veg3a +veg4a + veg5a + veg6a;
+            console.log(veg_subtotal);
+             if (veg_subtotal >= 1) {
+                 var veg_total = veg_subtotal - 1;
+                 veg_sub.innerHTML = "Subtract 1 Veggie Item";
+                 veg_sub2.innerHTML = "-$1.00";
+
+             }
+             else meat_total = meat_subtotal;
+             console.log(meat_total); 
+
+             var crust_total = crust1a + crust2a + crust3a +crust4a + crust5a;
+             var cheese_total = cheese1a + cheese2a +cheese3a;
+             var sauce_total = sauce1a + sauce2a + sauce3a + sauce4a;
+             var size_total = size1a + size2a + size3a + size4a;
+
+             var total = crust_total + size_total + sauce_total + cheese_total + veg_total + meat_total;
+             console.log(total);
+             total_price.innerHTML = "$"+total+".00";
+      
+      
+              
+      
+      
+      
+            }  
+      
+            
+      </script>
+           
+        
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>
